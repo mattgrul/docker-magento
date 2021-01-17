@@ -5,6 +5,7 @@ EDITION=${3:-community}
 
 curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/template | bash
 git clone https://github.com/mattgrul/magento2.git src
+git remote add upstream https://github.com/magento/magento2.git
 
 echo "Your system password has been requested to add an entry to /etc/hosts..."
 echo "127.0.0.1 ::1 $DOMAIN" | sudo tee -a /etc/hosts
